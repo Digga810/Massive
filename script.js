@@ -1,8 +1,9 @@
 let names = []
+
 var x = true
 
 for (let i = 0; x == true; i++) {
-   
+
     let comand = prompt('Введите команду')
     let comands = comand.split(', ')
     if (comands[0] == 'add') {
@@ -20,7 +21,8 @@ for (let i = 0; x == true; i++) {
         var x = false
     }
 }
-
-console.log(names);
-
-
+for (const key in names) {
+        for (const keys in names[key]) {
+            console.log(keys == 'name' ? `Ваше имя ${names[key][keys]}` : '');
+        }
+    }
